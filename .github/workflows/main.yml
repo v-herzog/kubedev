@@ -45,5 +45,6 @@ jobs:
       - name: Deploy to Kubernetes cluster
         uses: Azure/k8s-deploy@v1.3
         with:
+          image: vherzog/kubedev-api-produto:${{github.run_number}}
           manifests: ./api-produto/deployment.yaml
             
